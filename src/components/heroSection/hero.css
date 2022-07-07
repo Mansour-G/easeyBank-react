@@ -1,0 +1,167 @@
+
+:root{
+  --brightCyan :  hsl(192, 70%, 51%);
+  --limeGreen :   hsl(136, 65%, 51%);
+
+  --darkBlue : hsl(233, 26%, 24%);
+
+  --grayishBlue: hsl(233, 8%, 62%);
+
+  --lightGrayishBlue: hsl(220, 16%, 96%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
+
+  --sectionPadding : 50px;
+
+  
+}
+
+
+
+.heroSection{
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  min-height: 80vh;
+  padding: 0 4rem;
+  margin: 0 auto;
+
+  overflow-x: clip;
+}
+
+
+.heroTitle{
+  width: 20%;
+}
+.heroSection h1{
+  font-size: 45px;
+  color: var(--darkBlue);
+  font-weight: lighter;
+}
+.heroSection p{
+  font-size: 16px;
+  color: var(--grayishBlue);
+  padding-bottom: 1.5rem;
+}
+
+.bgMain{
+  display: none;
+}
+
+
+.bgMain .bg{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: -75px;
+}
+
+.bgMain .mobileImg{
+  width: 100%;
+  z-index: 22;
+  position: relative;
+  top: -100px;
+  transform: translate(-50%);
+  left: 50%;
+}
+
+
+
+.heroImg::before{
+  content: '';
+  position: absolute;
+  background-image: url(../../assets/bg-intro-desktop.svg);
+  width: 55%;
+  height: 142%;
+  background-size: 140%;
+  background-repeat: no-repeat;
+  right: 0rem;
+  top: -13rem;
+}
+
+
+.heroImg::after{
+  content: '';
+  position: absolute;
+  background-image: url(../../assets/image-mockups.png);
+  width: 55%;
+  height: 142%;
+  top: -8rem;
+  right: -10rem;
+  background-size: 91%;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1029px){
+  .heroTitle{
+    width: 40%;
+  }
+  .heroSection h1{
+    font-size: 43px;
+  }
+}
+
+
+@media (max-width: 890px) {
+  .heroTitle{
+    width: 50%;
+  }
+  .heroSection h1{
+    font-size: 43px;
+  }
+  .heroSection p{
+    font-size: 15px;
+  }
+
+
+  .heroImg::before{
+    width: 60%;
+    height: 164%;
+    background-size: 170%;
+    top: -5rem;
+    right: -2rem;
+  }
+
+  .heroImg::after{
+    width: 65%;
+
+    top: -2rem;
+    right: -9rem;
+  }
+}
+
+
+
+@media (max-width: 810px) {
+  .heroSection{
+    flex-direction: column-reverse;
+    padding: 0 1rem;
+  }
+  .heroTitle{
+    width: 100%;
+    text-align: center;
+    padding-bottom: 4rem;
+    margin-top: -3rem;
+  }
+  .heroTitle h1{
+    font-size: 38px;
+  }
+  .heroTitle p{
+    font-size: 14px;
+  }
+
+
+  .heroImg::before{
+    display: none;
+  }
+  .heroImg::after{
+    display: none;
+  }
+
+  .bgMain{
+    display: block;
+  }
+  
+
+}

@@ -1,0 +1,26 @@
+:root{
+--brightCyan :  hsl(192, 70%, 51%);
+--limeGreen :   hsl(136, 65%, 51%);
+}
+
+button{
+  color: rgb(250, 246, 246);
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  background: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
+}
+
+button:hover{
+  opacity: .8;
+}
+
+@media (max-width: 811px) {
+  button{
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+}

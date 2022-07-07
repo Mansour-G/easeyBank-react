@@ -1,0 +1,114 @@
+
+:root{
+  --brightCyan :  hsl(192, 70%, 51%);
+  --limeGreen :   hsl(136, 65%, 51%);
+
+  --darkBlue : hsl(233, 26%, 24%);
+
+  --grayishBlue: hsl(233, 8%, 62%);
+  --lightergrayishBlue: hsl(240, 4%, 77%);
+
+  --lightGrayishBlue: hsl(220, 16%, 96%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+  --White: hsl(0, 0%, 100%);
+
+  --sectionPaddingTops : 60px;
+  --sectionPaddingSides : 4rem;
+}
+
+
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 0 auto;
+
+  background-color: var(--darkBlue);
+  color: var(--VeryLightGray);
+  padding: var(--sectionPaddingTops) var(--sectionPaddingSides);
+}
+
+.social{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.social .logo{
+  filter: saturate(400%) brightness(700%) contrast(400%);
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+
+.social .socialIcons div{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+.social .socialIcons div img{
+  width: 17px;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+
+.social .socialIcons div img:hover{
+  filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(100%) contrast(100%);
+}
+
+.social .support{
+  width: 55%;
+  /* border: 1px solid; */
+  display: flex;
+  justify-content: space-between;
+}
+.social .support ul{
+  margin: 0;
+}
+.social .support li{
+  list-style: none;
+}
+.social .support li a{
+  font-size: 13px;
+  color: var(--VeryLightGray);
+  text-decoration: none;
+  line-height: 2.3;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+.social .support li a:hover{
+  color: var(--limeGreen);
+}
+
+.cta{
+  color: var(--VeryLightGray);
+  text-align: right;
+}
+
+.cta h6{
+  margin-top: 2rem;
+}
+
+
+  @media (max-width: 810px) {
+    footer{
+      flex-direction: column;
+      text-align: center;
+      /* padding: 10px; */
+    }
+    .social,.support{
+      flex-direction: column;
+      padding: 2rem 0;
+    }
+
+    .social .support li{
+      margin: 8px auto;
+    }
+
+    .cta{
+      text-align: center;
+    }
+  }
