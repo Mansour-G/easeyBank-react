@@ -35,14 +35,11 @@ footer{
   align-items: center;
   justify-content: space-between;
 }
-
-
 .social .logo{
   filter: saturate(400%) brightness(700%) contrast(400%);
   padding-bottom: 1rem;
   cursor: pointer;
 }
-
 .social .socialIcons div{
   display: flex;
   justify-content: space-between;
@@ -53,14 +50,11 @@ footer{
   transition: all .3s ease-in-out;
   cursor: pointer;
 }
-
 .social .socialIcons div img:hover{
   filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(100%) contrast(100%);
 }
-
 .social .support{
   width: 55%;
-  /* border: 1px solid; */
   display: flex;
   justify-content: space-between;
 }
@@ -78,7 +72,6 @@ footer{
   transition: all .2s ease-in-out;
   cursor: pointer;
 }
-
 .social .support li a:hover{
   color: var(--limeGreen);
 }
@@ -87,7 +80,6 @@ footer{
   color: var(--VeryLightGray);
   text-align: right;
 }
-
 .cta h6{
   margin-top: 2rem;
 }
@@ -97,13 +89,12 @@ footer{
     footer{
       flex-direction: column;
       text-align: center;
-      /* padding: 10px; */
     }
+    
     .social,.support{
       flex-direction: column;
       padding: 2rem 0;
     }
-
     .social .support li{
       margin: 8px auto;
     }

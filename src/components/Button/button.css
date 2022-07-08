@@ -13,11 +13,9 @@ button{
   transition: all .5s ease-in-out;
   background: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
 }
-
 button:hover{
   opacity: .8;
 }
-
 @media (max-width: 811px) {
   button{
     padding: 8px 14px;
