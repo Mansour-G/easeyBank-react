@@ -12,11 +12,7 @@
   --White: hsl(0, 0%, 100%);
 
   --sectionPadding : 50px;
-
-  
 }
-
-
 
 .heroSection{
   position: relative;
@@ -29,7 +25,6 @@
 
   overflow-x: clip;
 }
-
 
 .heroTitle{
   width: 20%;
@@ -45,29 +40,6 @@
   padding-bottom: 1.5rem;
 }
 
-.bgMain{
-  display: none;
-}
-
-
-.bgMain .bg{
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: -75px;
-}
-
-.bgMain .mobileImg{
-  width: 100%;
-  z-index: 22;
-  position: relative;
-  top: -100px;
-  transform: translate(-50%);
-  left: 50%;
-}
-
-
-
 .heroImg::before{
   content: '';
   position: absolute;
@@ -79,8 +51,6 @@
   right: 0rem;
   top: -13rem;
 }
-
-
 .heroImg::after{
   content: '';
   position: absolute;
@@ -93,7 +63,33 @@
   background-repeat: no-repeat;
 }
 
+.bgMain{
+  display: none;
+}
+.bgMain .bg{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -75px;
+}
+.bgMain .mobileImg{
+  position: relative;
+  width: 100%;
+  top: -100px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 22;
+}
+
 @media (min-width: 1029px){
+  .heroTitle{
+    width: 30%;
+  }
+  .heroSection h1{
+    font-size: 45px;
+  }
+}
+@media (max-width: 1030px){
   .heroTitle{
     width: 40%;
   }
@@ -101,8 +97,6 @@
     font-size: 43px;
   }
 }
-
-
 @media (max-width: 890px) {
   .heroTitle{
     width: 50%;
@@ -114,7 +108,6 @@
     font-size: 15px;
   }
 
-
   .heroImg::before{
     width: 60%;
     height: 164%;
@@ -125,13 +118,10 @@
 
   .heroImg::after{
     width: 65%;
-
     top: -2rem;
     right: -9rem;
   }
 }
-
-
 
 @media (max-width: 810px) {
   .heroSection{
@@ -151,7 +141,6 @@
     font-size: 14px;
   }
 
-
   .heroImg::before{
     display: none;
   }
@@ -162,6 +151,4 @@
   .bgMain{
     display: block;
   }
-  
-
 }

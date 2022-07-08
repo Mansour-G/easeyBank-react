@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import Logo from '../../assets/logo.svg'
 import hamburger from '../../assets/icon-hamburger.svg'
 import close from '../../assets/icon-close.svg'
@@ -9,23 +8,21 @@ import './nav.css'
 
 const Navbar = () => {
 
-  const [url, setUrl] = useState(hamburger);
+  const [img, setImg] = useState(hamburger);
 
   const toggleMenu = () => {
     const overlay = document.querySelector('#overlay')
     const navigation = document.querySelector('.navigations')
 
-    if (url === hamburger) {
-      setUrl(close);
+    if (img === hamburger) {
+      setImg(close);
       overlay.classList.add('showOvelay')
       navigation.classList.add('mobileNav')
-
     } else {
-      setUrl(hamburger);
+      setImg(hamburger);
       navigation.classList.remove('mobileNav')
       overlay.classList.remove('showOvelay')
     }
-
   }
 
   return (
@@ -40,15 +37,12 @@ const Navbar = () => {
           <li>Careers</li>
         </ul>
       </div>
-
       <div>
         <button className='button'>Request Invite</button>
       </div>
-
       <div className="menuBTn " onClick={toggleMenu}>
-        <img src={url} alt='...' />
+        <img src={img} alt='menuBTn' />
       </div>
-
     </nav>
   )
 }

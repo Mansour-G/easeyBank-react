@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from '../Button/button';
 import Logo from '../../assets/logo.svg'
-
 import insta from '../../assets/icon-instagram.svg'
 import twitter from '../../assets/icon-twitter.svg'
 import facebook from '../../assets/icon-facebook.svg'
@@ -12,7 +11,6 @@ import './footer.css'
 
 const Footer = () => {
   return (
-
     <footer>
       <div className="social">
         <div className="socialIcons">

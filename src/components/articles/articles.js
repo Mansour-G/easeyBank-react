@@ -10,9 +10,10 @@ const Articles = () => {
   return (
 
     <div className='articles'>
-      <h1>Latest Articles</h1>
-      <div className="topics">
 
+      <h1>Latest Articles</h1>
+
+      <div className="topics">
 
         <div className="topicCard">
           <div className="imageWrapper">
@@ -25,6 +26,7 @@ const Articles = () => {
               forced to only receive money in a single …</p>
           </div>
         </div>
+
         <div className="topicCard">
           <div className="imageWrapper">
             <img src={Restaurant} alt="" />
@@ -53,7 +55,6 @@ const Articles = () => {
           <div className="imageWrapper">
             <img src={Confetti} alt="" />
           </div>
-
           <div className="text">
             <p className='auther'>By Claire Robinson</p>
             <h4>Our invite-only Beta accounts are now live!</h4>
@@ -61,9 +62,8 @@ const Articles = () => {
               It’s easy to request an invite through the site ...</p>
           </div>
         </div>
-
-
       </div>
+
     </div>
   )
 }

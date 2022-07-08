@@ -1,26 +1,21 @@
 :root{
   --brightCyan :  hsl(192, 70%, 51%);
   --limeGreen :   hsl(136, 65%, 51%);
-
   --darkBlue : hsl(233, 26%, 24%);
-
   --grayishBlue: hsl(233, 8%, 62%);
-
   --lightGrayishBlue: hsl(220, 16%, 96%);
   --VeryLightGray: hsl(0, 0%, 98%);
   --White: hsl(0, 0%, 100%);
   }
 
 nav{
+  position: relative;
   padding: 15px 4rem;
+  margin: 0 auto;
   background-color: var(--White);
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  margin: 0 auto;
-
-  position: relative;
   z-index: 666;
 }
 .navItems ul{
@@ -42,17 +37,16 @@ nav{
   color: var(--limeGreen);
 }
 
-
 .mobileNav{
-  text-align: center;
-  font-size: 18px;
+  position: absolute;
   width: 85%;
   top: 70px;
   left: 50%;
-  padding: 1rem 3rem;
-
   transform: translate(-50%);
-  position: absolute;
+  padding: 1rem 3rem;
+  font-size: 18px;
+  text-align: center;
+
   border-radius: 5px;
   background: var(--VeryLightGray);
 
@@ -61,36 +55,8 @@ nav{
 .mobileNav li:not(:last-child){
   margin-bottom: 2rem;
 }
-
-
-
 .menuBTn{
-  transition: all .3s ease-in-out ;
   display: none;
-}
-
-
-@media (max-width: 810px) { 
-  nav{
-    padding: 15px 1rem;
-  }  
-
-  .menuBTn{
-    display: block;
-  }
-  .button{
-    display: none;
-  }
-
-  .navItems ul{
-    display: none;
-  }
-
-  .mobileNav ul{
-    display: block;
-  }
-
-
 }
 
 .button{
@@ -103,14 +69,24 @@ nav{
   transition: all .5s ease-in-out;
   background: linear-gradient(to right, var(--limeGreen), var(--brightCyan));
 }
-
 .button:hover{
   opacity: .8;
 }
 
-@media (max-width: 811px) {
+@media (max-width: 810px) { 
+  nav{
+    padding: 15px 1rem;
+  }
+  .menuBTn{
+    display: block;
+  }
   .button{
-    padding: 6px 12px;
-    font-size: 12px;
+    display: none;
+  }
+  .navItems ul{
+    display: none;
+  }
+  .mobileNav ul{
+    display: block;
   }
 }
